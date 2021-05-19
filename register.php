@@ -6,7 +6,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-            <form action="includes/register.inc.php" method="POST">
+        <a href="index.php">HOME</a>
+
+            <form class="center" action="includes/register.inc.php" method="POST">
                 <input name="username" placeholder="Enter username" type="text">
                 <input name="password" placeholder="Enter password" type="password">
                 <input name="repeat_password" placeholder="Repeat Password" type="password">
@@ -18,7 +20,7 @@
                 {
                     if ($_GET["registration"] == "success")
                     {
-                        echo 'Success!!';
+                        echo '<div class="alert alert-success">Success!</div>';
 
                     }
                 }
@@ -26,24 +28,24 @@
                 {
                     if ($_GET["error"] == "passwordsmismatch")
                     {
-                        echo 'Пароли не совпадают!!!';
+                        echo '<div class="alert alert-danger">Пароли не совпадают!</div>';
 
                     }
                     else if ($_GET["error"] == "stmt")
                     {
-                        echo 'Трабла в STMT';
+                        echo '<div class="alert alert-danger">Трабла в STMT</div>';
                     }
                     else if ($_GET["error"] == "emptyinputs")
                     {
-                        echo 'Заполните все поля!!!';
+                        echo '<div class="alert alert-danger">Заполните все поля!</div>';
                     }
                     else if ($_GET["error"] == "logintaken")
                     {
-                        echo 'Логин уже используется';
+                        echo '<div class="alert alert-danger">Логин уже используется</div>';
                     }
                     else if ($_GET["error"] == "incorrectlogin")
                     {
-                        echo 'Логин должен содержать только буквы и цифры!';
+                        echo '<div class="alert alert-danger">Логин должен содержать только буквы и цифры!</div>';
                     }
                 }
 

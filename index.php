@@ -12,9 +12,13 @@ if (isset($_SESSION["id"]))
     	<link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-    	<h1>Welcome, <?php echo $_SESSION["username"]; ?>!</h1>
-    	<a href="profile.php">Profile</a>
-    	<a href="includes/logout.inc.php">Logout</a>
+        <a href="index.php">HOME</a>
+
+        <div class="center">
+            <h1>Welcome, <?php echo $_SESSION["username"]; ?>!</h1>
+            <a href="profile.php">Profile</a>
+            <a href="includes/logout.inc.php">Logout</a>
+        </div>
     </body>
     </html>
 
@@ -31,8 +35,12 @@ else
     	<link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-    	<a href="register.php">Sign Up</a>
-    	<a href="login.php">Login</a>
+        <a href="index.php">HOME</a>
+        
+        <div class="center">
+    	   <a href="register.php">Sign Up</a>
+    	   <a href="login.php">Login</a>
+        </div>
     </body>
     </html>
 

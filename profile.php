@@ -11,7 +11,7 @@ if (isset($_SESSION["id"]))
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <a href="index.php">Back</a>
+        <a href="index.php">HOME</a>
 
         <div class="block">
             <h1>Hello, <?php echo $_SESSION["username"]; ?>!</h1>
